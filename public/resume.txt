@@ -1,0 +1,5 @@
+Placeholder resume. Replace this file with your actual PDF (e.g., resume.pdf) and update the footer link accordingly.
+Name: Priyo Tri
+Role: Frontend Engineer • React + TypeScript • Data Visualization
+Links: GitHub, LinkedIn
+Summary: Passionate about building beautiful, interactive data experiences with performance and accessibility in mind.

@@ -20,7 +20,7 @@ export default function About() {
         <img
           className="avatar large"
           alt="Profile photo"
-          src="/profile.jpg"
+          src={`${import.meta.env.BASE_URL}profile2.jpeg`}
           onError={(e) => { (e.currentTarget as HTMLImageElement).src = 'https://i.pravatar.cc/240?img=67' }}
         />
       </div>

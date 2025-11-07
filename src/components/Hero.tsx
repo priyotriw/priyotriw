@@ -107,7 +107,7 @@ export default function Hero() {
         <div className="hero-identity">
           <img
             className="hero-avatar hero-avatar-lg"
-            src={`${import.meta.env.BASE_URL}profile2.jpg`}
+            src={`${import.meta.env.BASE_URL}profile.jpeg`}
             alt="Foto Priyo Tri Winarko"
             onError={(e) => { (e.currentTarget as HTMLImageElement).src = 'https://i.pravatar.cc/300?img=67' }}
           />

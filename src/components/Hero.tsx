@@ -109,7 +109,15 @@ export default function Hero() {
             className="hero-avatar hero-avatar-lg"
             src={`${import.meta.env.BASE_URL}profile.jpeg`}
             alt="Foto Priyo Tri Winarko"
-            onError={(e) => { (e.currentTarget as HTMLImageElement).src = 'https://i.pravatar.cc/300?img=67' }}
+            onError={(e) => {
+              const img = e.currentTarget as HTMLImageElement
+              if ((img as any)._triedJpg !== true) {
+                (img as any)._triedJpg = true
+                img.src = `${import.meta.env.BASE_URL}profile.jpg`
+              } else {
+                img.src = 'https://i.pravatar.cc/300?img=67'
+              }
+            }}
           />
         </div>
         <h1 className="typewriter heading-highlight" aria-live="polite" aria-atomic="true">{text}</h1>

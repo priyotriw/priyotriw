@@ -21,7 +21,15 @@ export default function About() {
           className="avatar large"
           alt="Profile photo"
           src={`${import.meta.env.BASE_URL}profile2.jpeg`}
-          onError={(e) => { (e.currentTarget as HTMLImageElement).src = 'https://i.pravatar.cc/240?img=67' }}
+          onError={(e) => {
+            const img = e.currentTarget as HTMLImageElement
+            if ((img as any)._triedJpg !== true) {
+              (img as any)._triedJpg = true
+              img.src = `${import.meta.env.BASE_URL}profile2.jpg`
+            } else {
+              img.src = 'https://i.pravatar.cc/240?img=67'
+            }
+          }}
         />
       </div>
       <div className="about-body">
